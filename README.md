@@ -143,3 +143,16 @@ $ curl -I http://localhost:5601/status
 [root@i-036186b0b1b218c0 kibana]# ls
 kibana.keystore  "kibana.yml"  node.options
 [root@i-036186b0b1b218c0 kibana]#
+
+# #################################################################################################################
+#
+# 
+#                       VERY VERY IMPORTANT NOTE!!!!!!!!!!!!!!!
+#  To remotely connect to Kibana, set server.host to a non-loopback address. 
+   for instance the configs should look like this:
+     server.port: 5601    
+     server.host: "0.0.0.0"
+#   you make any changes to this file  kibana.yml stop and start the server. YOU MUST STOP and START or you will TROUBLESHOOL until Piet KOM!!
+# #################################################################################################################
+
+# https://www.elastic.co/guide/en/kibana/current/access.html
